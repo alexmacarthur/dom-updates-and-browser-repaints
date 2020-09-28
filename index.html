@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Updates and Browser Repaints</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      span {
+        font-size: 75px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span id="element"> original text </span>
+
+    <script>
+      window.addEventListener("load", () => {
+        // Ex. #1: Immediately log updated contents.
+        // const element = document.getElementById("element");
+        // element.innerHTML = "updated text";
+        // console.log(element.innerHTML);
+
+        // Ex. #2: Immediately alert updated contents.
+        // const element = document.getElementById("element");
+        // element.innerHTML = "updated text";
+        // alert(element.innerHTML);
+
+        // Ex. #3: Log after delay longer than browser's refresh rate.
+        // const element = document.getElementById("element");
+        // element.innerHTML = "updated text";
+        // setTimeout(() => {
+        //   alert(element.innerHTML);
+        // }, 20);
+
+        // Ex. #4: Alert after _next_ repaint.
+        // const element = document.getElementById("element");
+        // element.innerHTML = "updated text";
+        // requestAnimationFrame(() => {
+        //   requestAnimationFrame(() => {
+        //     alert(element.innerHTML);
+        //   });
+        // });
+      });
+    </script>
+  </body>
+</html>
