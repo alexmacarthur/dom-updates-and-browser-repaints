@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "serve"
+    "start": "serve"
   },
   "keywords": [],
   "author": "",

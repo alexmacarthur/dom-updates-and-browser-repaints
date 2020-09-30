@@ -10,10 +10,12 @@
         justify-content: center;
         width: 100vw;
         height: 100vh;
+        background: #616060;
       }
 
       span {
         font-size: 75px;
+        color: white;
       }
     </style>
   </head>
@@ -24,9 +26,9 @@
     <script>
       window.addEventListener("load", () => {
         // Ex. #1: Immediately log updated contents.
-        // const element = document.getElementById("element");
-        // element.innerHTML = "updated text";
-        // console.log(element.innerHTML);
+        const element = document.getElementById("element");
+        element.innerHTML = "updated text";
+        console.log(element.innerHTML);
 
         // Ex. #2: Immediately alert updated contents.
         // const element = document.getElementById("element");
